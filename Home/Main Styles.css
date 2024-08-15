@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/** Background Video Customize **/
+.BGvideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .BGvideo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .BGvideo {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/** Menu/navigation Bar Agesment */
+.Menu {
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Glow {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border-color: -moz-linear-gradient(top, #555555, #111111);
+    border: 3px solid;
+    border-radius: 60px;
+    position: relative;
+    color: rgb(0, 255, 115);
+    background: transparent;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.Glow:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 40px;
+    background: linear-gradient(0deg, rgba(12, 237, 66, 1) 0%, rgba(9, 60, 150, 1) 100%);
+    z-index: -1;
+    -webkit-box-shadow: 0px 0px 40px 5px rgba(38, 212, 119, 1);
+    -moz-box-shadow: 0px 0px 40px 5px rgba(38, 212, 119, 1);
+    box-shadow: 0px 0px 40px 5px rgba(38, 212, 119, 1);
+}
+
+.Glow:hover,
+.Glow:focus {
+    color: rgb(255, 255, 255);
+}
+
+.Glow:hover:before,
+.Glow:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.Glow:active {
+    transform: scale(0.9);
+}
+
+/** Navigation Bar **/
+.Menu nav a {
+    margin: 0px 10px;
+}
+
+.Menu nav {
+    padding: 10px;
+}
+
+.Menu img {
+    display: flex;
+    width: 200px;
+}
+
+.p1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.p2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+/**Middle Section Customize**/
+.MidSection {
+    margin-top: 10%;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/**Middle "Grapher" Text Customize **/
+.MidSection h1 {
+    cursor: none;
+    font-size: 100px;
+    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-color: black;
+    color: aqua;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.MidSection h1:hover {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+
+
+/** "journey" Button Customize**/
+.MidSection a {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    display: inline-block;
+    color: blueviolet;
+    font-size: 30px;
+    border: 3px solid #fff;
+    padding: 20px 70px;
+    border-radius: 60px;
+    margin-top: 10px;
+}
+
+
+
+/** "journey" Button Effect Customize **/
+.MidSection a:hover {
+    color: aqua;
+    background: transparent;
+    box-shadow: 0 0 30px;
+    transition-delay: 0.2s;
+}
